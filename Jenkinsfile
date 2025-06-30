@@ -10,7 +10,7 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 git credentialsId: 'github-ssh-creds',
-                    url: 'git@github.com:uthsarauvin@gmail.com/your-repo.git',
+                    url: 'git@github.com:UvinUpasena/Google-Sheet-Update.git',
                     branch: 'main'
             }
         }
