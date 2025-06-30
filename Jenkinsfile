@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sh '''
                 mkdir -p layer/python/lib/python3.13/site-packages
-                docker run --rm -v "$PWD/layer":/var/task --entrypoint=public.ecr.aws/lambda/python:3.13 \
+                docker run --rm -v "$PWD/layer":/var/task public.ecr.aws/lambda/python:3.13 \
                   /bin/sh -c "pip install -r /var/task/requirements.txt -t /var/task/python/lib/python3.13/site-packages/"
                 '''
             }
